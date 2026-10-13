@@ -12,8 +12,6 @@
   --link: oklch(0.5 0.17 30);
   --on-accent: #16141b;
   --caption: #ffe270;                    /* narration-box yellow */
-  --ph-bg: #dcdcdc;
-  --ph-text: #2e2e2e;
   --display: "Karantina", "Arial Narrow", system-ui, sans-serif;
   --body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Hebrew", "Arial Hebrew", sans-serif;
   --line: 3px solid var(--ink);
@@ -29,8 +27,6 @@
     --muted: oklch(0.8 0.014 280);
     --dot: rgba(255, 255, 255, 0.07);
     --link: oklch(0.8 0.15 33);
-    --ph-bg: #3a3a40;
-    --ph-text: #e6e6e6;
   }
 }
 
@@ -155,24 +151,23 @@ p { margin: 0 0 1em; }
 section { margin-block-end: 4rem; scroll-margin-top: 1rem; }
 .lead { max-width: 42rem; color: var(--muted); font-size: 1.1rem; }
 
-/* Media placeholders */
-.ph {
-  margin: 0;
-  display: grid;
-  place-content: center;
-  gap: 0.25rem;
-  aspect-ratio: 16 / 9;
-  background: var(--ph-bg);
-  color: var(--ph-text);
-  border: 3px dashed var(--ph-text);
-  text-align: center;
-  padding: 1rem;
+/* Showcase screenshots */
+.shots figure { margin: 0; }
+.shots img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: var(--line);
+  box-shadow: var(--pop);
 }
-.ph.shot { aspect-ratio: 4 / 3; }
-.ph figcaption { font-weight: 400; font-size: 0.95rem; }
+.shots figcaption { font-size: 0.95rem; color: var(--muted); margin-block-start: 0.6rem; }
+.shots .wide { grid-column: 1 / -1; }
+.credit { font-size: 0.95rem; color: var(--muted); }
+.actions.play { margin-block: 0 2rem; }
+.play-line { margin: 1.5rem 0 0; font-weight: 700; }
 .shots {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
   gap: 1rem;
   margin-block: 1rem 1.5rem;
 }

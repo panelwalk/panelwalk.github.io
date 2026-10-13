@@ -5,10 +5,8 @@
 
   BRAND: "Panelwalk" is a working name and appears only as that exact word.
   To rename: find-replace "Panelwalk" in index.html and he/index.html.
-  The wordmark is also baked into og-image.png (and the JSON-LD/og:site_name), so regenerate that image too.
-  Launch-day edits are marked "LAUNCH:" in both pages.
-
-  PLACEHOLDERS before sharing: the grey media boxes.
+  The wordmark is also baked into og-image.jpg (and the JSON-LD/og:site_name), so regenerate that image too.
+  Showcase game: The Ice Cream Palace (panelwalk.itch.io/ice-cream-palace), art by Winsor McCay (1907, public domain).
 -->
 <html lang="en" dir="ltr">
 <head>
@@ -16,8 +14,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Panelwalk: turn your comic into a point-and-click game</title>
   <meta name="description" content="Turn your comic or webcomic into a short point-and-click game made from your own panels. Free for artists: you keep your rights and get 50% of net revenue.">
-  <!-- LAUNCH: remove noindex -->
-  <meta name="robots" content="noindex">
   <meta name="color-scheme" content="light dark">
   <link rel="canonical" href="https://panelwalk.github.io/">
   <link rel="alternate" hreflang="en" href="https://panelwalk.github.io/">
@@ -31,16 +27,15 @@
   <meta property="og:title" content="Panelwalk: turn your comic into a point-and-click game">
   <meta property="og:description" content="Turn your comic or webcomic into a short point-and-click game made from your own panels. Free for artists: you keep your rights and get 50% of net revenue.">
   <meta property="og:url" content="https://panelwalk.github.io/">
-  <!-- LAUNCH: swap og-image for Befuddle Hall art -->
-  <meta property="og:image" content="https://panelwalk.github.io/og-image.png">
+  <meta property="og:image" content="https://panelwalk.github.io/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Panelwalk logo: a speech balloon with a P. Your comic, playable.">
+  <meta property="og:image:alt" content="Winsor McCay's 1907 Little Nemo panel of a palace made of ice cream, with Nemo, the Princess and Flip on a sledge. Text: The Ice Cream Palace. Play free. Panelwalk.">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="he_IL">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Panelwalk","url":"https://panelwalk.github.io/","logo":"https://panelwalk.github.io/apple-touch-icon.png","sameAs":["https://www.instagram.com/panelwalkgames/","https://bsky.app/profile/panelwalkgames.bsky.social","https://www.tiktok.com/@panelwalkgames","https://panelwalk.itch.io/"]}
+  {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://panelwalk.github.io/#org","name":"Panelwalk","url":"https://panelwalk.github.io/","logo":"https://panelwalk.github.io/apple-touch-icon.png","sameAs":["https://www.instagram.com/panelwalkgames/","https://bsky.app/profile/panelwalkgames.bsky.social","https://www.tiktok.com/@panelwalkgames","https://panelwalk.itch.io/"]},{"@type":"VideoGame","name":"The Ice Cream Palace","url":"https://panelwalk.itch.io/ice-cream-palace","description":"A short, free point-and-click game made from Winsor McCay's Little Nemo in Slumberland Sunday pages (1907).","image":"https://panelwalk.github.io/og-image.jpg","genre":"Point-and-click adventure","gamePlatform":"Web browser","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Winsor McCay"},"publisher":{"@id":"https://panelwalk.github.io/#org"}}]}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,23 +63,22 @@
         <a class="btn" href="#contact">Talk to us</a>
         <a class="btn alt" href="#how">How it works</a>
       </div>
+      <p class="play-line">Here to play? <a href="https://panelwalk.itch.io/ice-cream-palace">Play The Ice Cream Palace free</a>, our Little Nemo game.</p>
     </div>
 
     <section id="see" aria-labelledby="see-h">
       <h2 id="see-h">See it</h2>
       <p class="lead">Players click on the people and objects in your art, talk in your speech balloons and play through your story. Cutscenes run panel by panel. It works in the browser and on phones.</p>
-      <p>To see how the engine works, watch the short clip on our profile (<a href="https://www.instagram.com/panelwalkgames/">@panelwalkgames</a>). It runs on grey placeholder panels.</p>
+      <p>Here it is with a classic: <em>The Ice Cream Palace</em>, our free game made from Winsor McCay's <em>Little Nemo in Slumberland</em> Sunday pages of 1907. Every room and every cutscene is one of McCay's panels. It takes 5 to 10 minutes.</p>
 
-      <!-- TODO: showcase media (Befuddle Hall) -->
-      <figure class="ph">
-        <strong>Video coming soon</strong>
-        <figcaption>15 seconds: a comic page next to the same scene in the game</figcaption>
-      </figure>
       <div class="shots">
-        <!-- TODO: showcase media (Befuddle Hall) -->
-        <figure class="ph shot"><strong>Screenshot coming soon</strong><figcaption>A panel as a playable room</figcaption></figure>
-        <figure class="ph shot"><strong>Screenshot coming soon</strong><figcaption>Dialogue in the comic's own balloons</figcaption></figure>
-        <figure class="ph shot"><strong>Screenshot coming soon</strong><figcaption>A panel-by-panel cutscene</figcaption></figure>
+        <figure class="wide"><img src="img/ice-cream-palace-5-palace.webp" width="1200" height="675" alt="Game screen: McCay's panel of Jack Frost's palace as a room. Nemo, the Princess and Flip arrive on a sledge, and the Princess says: Yes. And it's built of pure ice cream, too!"><figcaption>Jack Frost's palace: one panel, one playable room</figcaption></figure>
+        <figure><img src="img/ice-cream-palace-4-rotunda.webp" width="1200" height="675" loading="lazy" alt="Game screen: Jack Frost on his throne of ice above a crowded skating rink. A palace attendant warns: Do not shake his hand. His grip is terrible!"><figcaption>Dialogue in McCay's own words</figcaption></figure>
+        <figure><img src="img/ice-cream-palace-2-choice.webp" width="1200" height="675" loading="lazy" alt="Game screen: Flip stands up on the royal toboggan. Two choices for Nemo: Sit down, Flip! or Me too! I'm standing up!"><figcaption>Choose what Nemo says</figcaption></figure>
+      </div>
+      <p class="credit">Art: Winsor McCay, <cite>Little Nemo in Slumberland</cite> (1907), public domain.</p>
+      <div class="actions play">
+        <a class="btn" href="https://panelwalk.itch.io/ice-cream-palace">Play The Ice Cream Palace free on itch.io</a>
       </div>
 
       <div class="caption-box">

@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
   Artist pitch page (Hebrew, RTL). English twin: ../index.html. Shared styles: ../style.css.
-  See the comment at the top of ../index.html for how to rename the brand and what's a placeholder.
+  See the comment at the top of ../index.html for how to rename the brand.
   Number ranges use a plain hyphen (6-9), not an en dash: an en dash flips to "9–6" in RTL text.
 -->
 <html lang="he" dir="rtl">
@@ -10,8 +10,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Panelwalk: הופכים את הקומיקס שלך למשחק</title>
   <meta name="description" content="הופכים את הקומיקס או קומיקס הרשת שלך למשחק הרפתקאות קצר שבנוי מהפאנלים שלך. בלי עלות, הזכויות נשארות שלך, ו-50% מההכנסות נטו הולכים אליך.">
-  <!-- LAUNCH: remove noindex -->
-  <meta name="robots" content="noindex">
   <meta name="color-scheme" content="light dark">
   <link rel="canonical" href="https://panelwalk.github.io/he/">
   <link rel="alternate" hreflang="en" href="https://panelwalk.github.io/">
@@ -25,16 +23,15 @@
   <meta property="og:title" content="Panelwalk: הופכים את הקומיקס שלך למשחק">
   <meta property="og:description" content="הופכים את הקומיקס או קומיקס הרשת שלך למשחק הרפתקאות קצר שבנוי מהפאנלים שלך. בלי עלות, הזכויות נשארות שלך, ו-50% מההכנסות נטו הולכים אליך.">
   <meta property="og:url" content="https://panelwalk.github.io/he/">
-  <!-- LAUNCH: swap og-image for Befuddle Hall art -->
-  <meta property="og:image" content="https://panelwalk.github.io/og-image.png">
+  <meta property="og:image" content="https://panelwalk.github.io/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="הלוגו של Panelwalk: בועת דיבור עם האות P. הקומיקס שלך, עכשיו משחק.">
+  <meta property="og:image:alt" content="פאנל של Winsor McCay מ-1907, מתוך Little Nemo: ארמון עשוי גלידה, ונמו, הנסיכה ופליפ מגיעים אליו במזחלת. הכיתוב: The Ice Cream Palace. Play free. Panelwalk.">
   <meta property="og:locale" content="he_IL">
   <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Panelwalk","url":"https://panelwalk.github.io/","logo":"https://panelwalk.github.io/apple-touch-icon.png","sameAs":["https://www.instagram.com/panelwalkgames/","https://bsky.app/profile/panelwalkgames.bsky.social","https://www.tiktok.com/@panelwalkgames","https://panelwalk.itch.io/"]}
+  {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://panelwalk.github.io/#org","name":"Panelwalk","url":"https://panelwalk.github.io/","logo":"https://panelwalk.github.io/apple-touch-icon.png","sameAs":["https://www.instagram.com/panelwalkgames/","https://bsky.app/profile/panelwalkgames.bsky.social","https://www.tiktok.com/@panelwalkgames","https://panelwalk.itch.io/"]},{"@type":"VideoGame","name":"The Ice Cream Palace","url":"https://panelwalk.itch.io/ice-cream-palace","description":"A short, free point-and-click game made from Winsor McCay's Little Nemo in Slumberland Sunday pages (1907).","image":"https://panelwalk.github.io/og-image.jpg","genre":"Point-and-click adventure","gamePlatform":"Web browser","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Winsor McCay"},"publisher":{"@id":"https://panelwalk.github.io/#org"}}]}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,23 +59,22 @@
         <a class="btn" href="#contact">דברו איתנו</a>
         <a class="btn alt" href="#how">איך זה עובד</a>
       </div>
+      <p class="play-line">באתם לשחק? <a href="https://panelwalk.itch.io/ice-cream-palace">שחקו בחינם ב-<bdi>The Ice Cream Palace</bdi></a>, המשחק שלנו לפי <bdi>Little Nemo</bdi>.</p>
     </div>
 
     <section id="see" aria-labelledby="see-h">
       <h2 id="see-h">ככה זה נראה</h2>
       <p class="lead">השחקנים לוחצים על הדמויות והחפצים שציירת, מדברים בבועות הדיבור שלך ועוברים את הסיפור שלך. הסצנות המונפשות מתקדמות פאנל אחרי פאנל. המשחק עובד בדפדפן ובטלפון.</p>
-      <p>כדי לראות איך המנוע עובד, צפו בסרטון הקצר בפרופיל שלנו (<a href="https://www.instagram.com/panelwalkgames/" dir="ltr">@panelwalkgames</a>). המנוע רץ בו על פאנלים אפורים זמניים.</p>
+      <p>ככה זה נראה עם קלאסיקה: <bdi><em>The Ice Cream Palace</em></bdi> (ארמון הגלידה), משחק חינמי שבנינו מעמודי הקומיקס של <bdi><em>Little Nemo in Slumberland</em></bdi> מ-1907, מאת <bdi>Winsor McCay</bdi>. כל חדר וכל סצנה מונפשת במשחק הם פאנל של מקיי. המשחק נמשך 5-10 דקות.</p>
 
-      <!-- TODO: showcase media (Befuddle Hall) -->
-      <figure class="ph">
-        <strong>הסרטון בדרך</strong>
-        <figcaption>15 שניות: עמוד מהקומיקס לצד אותה סצנה במשחק</figcaption>
-      </figure>
       <div class="shots">
-        <!-- TODO: showcase media (Befuddle Hall) -->
-        <figure class="ph shot"><strong>צילום מסך בדרך</strong><figcaption>פאנל שהפך לחדר במשחק</figcaption></figure>
-        <figure class="ph shot"><strong>צילום מסך בדרך</strong><figcaption>דיאלוג בבועות הדיבור של הקומיקס</figcaption></figure>
-        <figure class="ph shot"><strong>צילום מסך בדרך</strong><figcaption>סצנה מונפשת, פאנל אחרי פאנל</figcaption></figure>
+        <figure class="wide"><img src="../img/ice-cream-palace-5-palace.webp" width="1200" height="675" alt="מסך מהמשחק: הפאנל של מקיי עם הארמון של ג'ק פרוסט, כחדר במשחק. נמו, הנסיכה ופליפ מגיעים במזחלת, והנסיכה אומרת שהארמון בנוי כולו מגלידה."><figcaption>הארמון של ג'ק פרוסט: פאנל אחד, חדר אחד במשחק</figcaption></figure>
+        <figure><img src="../img/ice-cream-palace-4-rotunda.webp" width="1200" height="675" loading="lazy" alt="מסך מהמשחק: ג'ק פרוסט יושב על כס מקרח מעל משטח החלקה מלא מחליקים. משרת בארמון מזהיר לא ללחוץ לו את היד, כי האחיזה שלו נוראית."><figcaption>דיאלוג במילים של מקיי עצמו</figcaption></figure>
+        <figure><img src="../img/ice-cream-palace-2-choice.webp" width="1200" height="675" loading="lazy" alt="מסך מהמשחק: פליפ נעמד על המזחלת המלכותית, ולנמו יש שתי תשובות לבחור ביניהן: לבקש מפליפ לשבת, או לקום גם הוא."><figcaption>בוחרים מה נמו אומר</figcaption></figure>
+      </div>
+      <p class="credit">ציורים: <bdi>Winsor McCay, <cite>Little Nemo in Slumberland</cite> (1907)</bdi>, נחלת הכלל.</p>
+      <div class="actions play">
+        <a class="btn" href="https://panelwalk.itch.io/ice-cream-palace">שחקו ב-<bdi>The Ice Cream Palace</bdi> בחינם ב-<bdi>itch.io</bdi></a>
       </div>
 
       <div class="caption-box">

@@ -24,4 +24,16 @@
     <xhtml:link rel="alternate" hreflang="he" href="https://panelwalk.github.io/he/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://panelwalk.github.io/privacy/"/>
   </url>
+  <url>
+    <loc>https://panelwalk.github.io/accessibility/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panelwalk.github.io/accessibility/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://panelwalk.github.io/he/accessibility/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panelwalk.github.io/accessibility/"/>
+  </url>
+  <url>
+    <loc>https://panelwalk.github.io/he/accessibility/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://panelwalk.github.io/accessibility/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://panelwalk.github.io/he/accessibility/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://panelwalk.github.io/accessibility/"/>
+  </url>
 </urlset>

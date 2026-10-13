@@ -5,6 +5,8 @@
 
   BRAND: "Panelwalk" is a working name and appears only as that exact word.
   To rename: find-replace "Panelwalk" in index.html and he/index.html.
+  The wordmark is also baked into og-image.png (and the JSON-LD/og:site_name), so regenerate that image too.
+  Launch-day edits are marked "LAUNCH:" in both pages.
 
   PLACEHOLDERS before sharing: the grey media boxes.
 -->
@@ -12,15 +14,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Panelwalk: your comic, playable</title>
-  <meta name="description" content="We turn your comic into a short point-and-click game where every room is one of your panels. No cost to you, you keep your rights, and you get half of the game's net revenue.">
-  <!-- Unlisted pre-launch page: remove noindex when it should show up in search. -->
+  <title>Panelwalk: turn your comic into a point-and-click game</title>
+  <meta name="description" content="Turn your comic or webcomic into a short point-and-click game made from your own panels. Free for artists: you keep your rights and get 50% of net revenue.">
+  <!-- LAUNCH: remove noindex -->
   <meta name="robots" content="noindex">
   <meta name="color-scheme" content="light dark">
-  <link rel="alternate" hreflang="he" href="he/">
+  <link rel="canonical" href="https://panelwalk.github.io/">
+  <link rel="alternate" hreflang="en" href="https://panelwalk.github.io/">
+  <link rel="alternate" hreflang="he" href="https://panelwalk.github.io/he/">
+  <link rel="alternate" hreflang="x-default" href="https://panelwalk.github.io/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Panelwalk">
+  <meta property="og:title" content="Panelwalk: turn your comic into a point-and-click game">
+  <meta property="og:description" content="Turn your comic or webcomic into a short point-and-click game made from your own panels. Free for artists: you keep your rights and get 50% of net revenue.">
+  <meta property="og:url" content="https://panelwalk.github.io/">
+  <!-- LAUNCH: swap og-image for Befuddle Hall art -->
+  <meta property="og:image" content="https://panelwalk.github.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Panelwalk logo: a speech balloon with a P. Your comic, playable.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="he_IL">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Panelwalk","url":"https://panelwalk.github.io/","logo":"https://panelwalk.github.io/apple-touch-icon.png","sameAs":["https://www.instagram.com/panelwalkgames/","https://bsky.app/profile/panelwalkgames.bsky.social","https://www.tiktok.com/@panelwalkgames","https://panelwalk.itch.io/"]}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&display=swap">
+  <!-- Font CSS loads without blocking first paint; headings use the fallback font until it arrives. -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&display=swap"></noscript>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>

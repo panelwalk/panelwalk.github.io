@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <!-- Panelwalk avatar: hand-built paths, no fonts or third-party art. Content stays inside the
+       inner ~80% circle so the round crop at 110 px keeps the whole balloon. -->
+  <defs>
+    <g id="balloon">
+      <ellipse cx="540" cy="500" rx="330" ry="270"/>
+      <path d="M380 700 L330 860 L520 750 Z"/>
+    </g>
+    <!-- bold "P": stem + bowl with an even-odd counter, 295x400 units -->
+    <path id="p" fill-rule="evenodd" d="M0 0 H170 A125 125 0 0 1 170 250 H110 V400 H0 Z M110 85 H165 A40 40 0 0 1 165 165 H110 Z"/>
+  </defs>
+  <rect width="1080" height="1080" fill="#f2d21b"/>
+  <use xlink:href="#balloon" fill="#000" stroke="#000" stroke-width="72" stroke-linejoin="round" transform="translate(26 26)"/>
+  <use xlink:href="#balloon" fill="#000" stroke="#000" stroke-width="72" stroke-linejoin="round"/>
+  <use xlink:href="#balloon" fill="#fff"/>
+  <g transform="translate(426 305) scale(0.95) skewX(-8)">
+    <use xlink:href="#p" fill="#f2d21b" stroke="#000" stroke-width="14" stroke-linejoin="round" transform="translate(18 16)"/>
+    <use xlink:href="#p" fill="#000"/>
+  </g>
+</svg>

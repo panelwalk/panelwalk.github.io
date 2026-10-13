@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
   Artist pitch page (English). Hebrew twin: he/index.html. Shared styles: style.css.
-  Plain static files, no build step, no analytics or third-party scripts (one Google Font).
+  Plain static files, no build step, no analytics, cookies or third-party requests (the font is self-hosted in fonts/).
 
   BRAND: "Panelwalk" is a working name and appears only as that exact word.
   To rename: find-replace "Panelwalk" in index.html and he/index.html.
@@ -37,11 +37,6 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://panelwalk.github.io/#org","name":"Panelwalk","url":"https://panelwalk.github.io/","logo":"https://panelwalk.github.io/apple-touch-icon.png","sameAs":["https://www.instagram.com/panelwalkgames/","https://bsky.app/profile/panelwalkgames.bsky.social","https://www.tiktok.com/@panelwalkgames","https://panelwalk.itch.io/"]},{"@type":"VideoGame","name":"The Ice Cream Palace","url":"https://panelwalk.itch.io/ice-cream-palace","description":"A short, free point-and-click game made from Winsor McCay's Little Nemo in Slumberland Sunday pages (1907).","image":"https://panelwalk.github.io/og-image.jpg","genre":"Point-and-click adventure","gamePlatform":"Web browser","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@id":"https://panelwalk.github.io/#org"},"publisher":{"@id":"https://panelwalk.github.io/#org"},"isBasedOn":{"@type":"CreativeWork","name":"Little Nemo in Slumberland","datePublished":"1907","author":{"@type":"Person","name":"Winsor McCay"},"license":"https://creativecommons.org/publicdomain/mark/1.0/"}}]}
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Font CSS loads without blocking first paint; headings use the fallback font until it arrives. -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&display=swap"></noscript>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -68,7 +63,7 @@
 
     <section id="see" aria-labelledby="see-h">
       <h2 id="see-h">See it</h2>
-      <p class="lead">Players click on the people and objects in your art, talk in your speech balloons and play through your story. Cutscenes run panel by panel. It works in the browser and on phones.</p>
+      <p class="lead">Players click on the people and objects in your art, talk in your speech balloons and play through your story. Cutscenes run panel by panel. It plays in your browser, including phones in landscape.</p>
       <p>Here it is with a classic: <em>The Ice Cream Palace</em>, our free game made from Winsor McCay's <em>Little Nemo in Slumberland</em> Sunday pages of 1907. Every room and every cutscene is one of McCay's panels. It takes 5 to 10 minutes to play in your browser.</p>
 
       <div class="shots">

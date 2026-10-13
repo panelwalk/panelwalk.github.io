@@ -1,0 +1,250 @@
+/* Artist pitch page, shared by index.html (English) and he/index.html (Hebrew, RTL).
+   Standalone on purpose: the site's Hugo head loads analytics, and this page must have none.
+   Logical properties (inline/block) keep the layout mirrored correctly in RTL. */
+
+:root {
+  --paper: #fbf7ee;
+  --panel: #ffffff;
+  --ink: #16141b;
+  --muted: #4a4652;
+  --dot: rgba(22, 20, 27, 0.09);
+  --accent: oklch(0.7 0.18 30);          /* the main site's coral */
+  --link: oklch(0.5 0.17 30);
+  --on-accent: #16141b;
+  --caption: #ffe270;                    /* narration-box yellow */
+  --ph-bg: #dcdcdc;
+  --ph-text: #2e2e2e;
+  --display: "Karantina", "Arial Narrow", system-ui, sans-serif;
+  --body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Hebrew", "Arial Hebrew", sans-serif;
+  --line: 3px solid var(--ink);
+  --pop: 4px 4px 0 var(--ink);
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: oklch(0.145 0.012 280);     /* the main site's background */
+    --panel: oklch(0.2 0.012 280);
+    --ink: oklch(0.95 0.005 280);
+    --muted: oklch(0.8 0.014 280);
+    --dot: rgba(255, 255, 255, 0.07);
+    --link: oklch(0.8 0.15 33);
+    --ph-bg: #3a3a40;
+    --ph-text: #e6e6e6;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 1.0625rem/1.65 var(--body);
+}
+
+a { color: var(--link); text-underline-offset: 0.15em; }
+a:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+h1, h2, h3, .brand {
+  font-family: var(--display);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  margin: 0 0 0.5em;
+}
+h2 { font-size: clamp(2.4rem, 7vw, 3.4rem); }
+h3 { font-size: 1.75rem; margin-block-end: 0.3em; }
+p { margin: 0 0 1em; }
+
+.skip {
+  position: absolute;
+  inset-inline-start: 1rem;
+  top: -4rem;
+  background: var(--caption);
+  color: var(--on-accent);
+  padding: 0.5rem 1rem;
+  border: var(--line);
+  z-index: 10;
+}
+.skip:focus { top: 1rem; }
+
+.shell {
+  width: min(68rem, 100% - 2rem);        /* 16px gutter on phones */
+  margin-inline: auto;
+}
+
+/* Header */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+.brand { font-size: 2.2rem; margin: 0; color: var(--ink); text-decoration: none; }
+.lang { font-weight: 700; }
+
+/* Hero */
+.hero {
+  border: var(--line);
+  box-shadow: var(--pop);
+  background-color: var(--panel);
+  background-image: radial-gradient(var(--dot) 1.5px, transparent 2px);
+  background-size: 12px 12px;
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  margin-block: 0.5rem 3.5rem;
+}
+.eyebrow {
+  display: inline-block;
+  background: var(--caption);
+  color: var(--on-accent);
+  border: var(--line);
+  padding: 0.15rem 0.7rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-block-end: 1rem;
+}
+.hero h1 { font-size: clamp(3.4rem, 13vw, 7rem); }
+
+.balloon {
+  position: relative;
+  max-width: 40rem;
+  background: var(--panel);
+  border: var(--line);
+  border-radius: 1.75rem;
+  padding: 1rem 1.4rem;
+  margin-block: 0.5rem 2.25rem;
+  font-size: 1.15rem;
+}
+.balloon::after {                        /* the balloon's tail */
+  content: "";
+  position: absolute;
+  inset-inline-start: 2.5rem;
+  bottom: -0.72rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: var(--panel);
+  border-inline-end: var(--line);
+  border-bottom: var(--line);
+  transform: rotate(45deg);
+}
+.balloon p { margin: 0; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.9rem; }
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.3rem;
+  border: 3px solid var(--on-accent);
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: var(--pop);
+}
+.btn.alt { background: var(--panel); color: var(--ink); border-color: var(--ink); }
+.btn:hover { transform: translate(-1px, -1px); }
+@media (prefers-reduced-motion: reduce) { .btn:hover { transform: none; } }
+
+/* Sections */
+section { margin-block-end: 4rem; scroll-margin-top: 1rem; }
+.lead { max-width: 42rem; color: var(--muted); font-size: 1.1rem; }
+
+/* Media placeholders */
+.ph {
+  margin: 0;
+  display: grid;
+  place-content: center;
+  gap: 0.25rem;
+  aspect-ratio: 16 / 9;
+  background: var(--ph-bg);
+  color: var(--ph-text);
+  border: 3px dashed var(--ph-text);
+  text-align: center;
+  padding: 1rem;
+}
+.ph.shot { aspect-ratio: 4 / 3; }
+.ph figcaption { font-weight: 400; font-size: 0.95rem; }
+.shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+  margin-block: 1rem 1.5rem;
+}
+
+.caption-box {
+  background: var(--caption);
+  color: var(--on-accent);
+  border: var(--line);
+  border-color: var(--on-accent);
+  box-shadow: var(--pop);
+  padding: 0.9rem 1.2rem;
+  max-width: 40rem;
+}
+.caption-box p { margin: 0; }
+.caption-box a { color: var(--on-accent); font-weight: 700; }
+
+/* Steps and deal: comic panels in a grid with gutters */
+.panels {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1.1rem;
+}
+.panels > li {
+  background: var(--panel);
+  border: var(--line);
+  box-shadow: var(--pop);
+  padding: 1.2rem 1.3rem;
+}
+.panels p { margin: 0; }
+.steps { counter-reset: step; }
+.steps > li { counter-increment: step; }
+.steps > li::before {
+  content: counter(step);
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-block-end: 0.8rem;
+  border: var(--line);
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--on-accent);
+  font: 700 1.5rem/1 var(--display);
+}
+.deal { grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); }
+@media (max-width: 22rem) { .deal { grid-template-columns: 1fr; } }
+
+/* FAQ */
+.faq { max-width: 46rem; border-top: var(--line); }
+.faq details { border-bottom: 2px solid var(--ink); }
+.faq summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding-block: 0.9rem;
+}
+.faq details p { margin-block-end: 1rem; }
+
+/* Contact */
+.contact {
+  border: var(--line);
+  box-shadow: var(--pop);
+  background: var(--panel);
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+footer {
+  border-top: 2px solid var(--ink);
+  padding-block: 1.25rem 2.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
